@@ -1,7 +1,6 @@
 version: '2'
 services:
   mysql:
-    restart: always
     build: ./data/mysql/
     volumes:
       - "./data/mysql/db:/var/lib/mysql"
@@ -14,7 +13,6 @@ services:
     ports:
       - "3307:3306"
   nginx:
-    restart: always
     image: "nginx:mainline-alpine"
     ports:
       - "80:80"
