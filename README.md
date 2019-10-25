@@ -51,12 +51,19 @@ Here, create a `sample` project
 /var/www/html # exit
 ```
 
-### Fix Configuration
+### Fix Configuration about db
 Update `data/htdocs/sample/config/app.php` at line 251
 
 ```data/htdocs/sample/config/app.php
 -   'host' => 'localhost',
 +   'host' => 'mysql',
+```
+
+### Fix Configuration about app name
+Update `docker-compose.yml` at line 43
+```
+-      PRJ: "sample"
++      PRJ: "<your app name>"
 ```
 
 ## Build Up
